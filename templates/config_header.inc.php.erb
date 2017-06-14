@@ -16,9 +16,9 @@
  * This is needed for cookie based authentication to encrypt password in
  * cookie
  */
-include('/var/lib/phpmyadmin/blowfish_secret.inc.php');
-if (file_exists('/var/lib/phpmyadmin/config.inc.php')) {
-  include('/var/lib/phpmyadmin/config.inc.php');
+include('/var/lib/<%= scope.lookupvar('phpmyadmin::params::package_name') %>/blowfish_secret.inc.php');
+if (file_exists('/var/lib/<%= scope.lookupvar('phpmyadmin::params::package_name') %>/config.inc.php')) {
+  include('/var/lib/<%= scope.lookupvar('phpmyadmin::params::package_name') %>/config.inc.php');
 }
 
 $cfg['PropertiesIconic'] = <%= @properties_iconic %>;

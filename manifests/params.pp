@@ -7,7 +7,7 @@ class phpmyadmin::params {
   #Class defaults
   $apache_name  = $::apache::params::apache_name
   $apache_group = $::apache::params::group
-  $disable_mod_security = hiera('phpmyadmin::disable_mod_security', false)
+  $disable_mod_security = false
 
   #Per OS variables
   case $::osfamily {
